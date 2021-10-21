@@ -26,26 +26,25 @@ completion-fish: completions/fish/yt-dlp.fish
 completion-zsh: completions/zsh/_yt-dlp
 lazy-extractors: yt_dlp/extractor/lazy_extractors.py
 
-PREFIX ?= /usr/local
-DESTDIR ?= .
-BINDIR ?= $(PREFIX)/bin
-MANDIR ?= $(PREFIX)/man
-SHAREDIR ?= $(PREFIX)/share
+PREFIX = ${HOME}/local
+BINDIR = $(PREFIX)/bin
+SHAREDIR = $(PREFIX)/share
+MANDIR = $(SHAREDIR)/man
 # make_supportedsites.py doesnot work correctly in python2
-PYTHON ?= /usr/bin/env python3
+PYTHON = /usr/bin/env python3
 
 # set SYSCONFDIR to /etc if PREFIX=/usr or PREFIX=/usr/local
-SYSCONFDIR = $(shell if [ $(PREFIX) = /usr -o $(PREFIX) = /usr/local ]; then echo /etc; else echo $(PREFIX)/etc; fi)
+SYSCONFDIR = $(shell echo $(PREFIX)/etc )
 
 # set markdown input format to "markdown-smart" for pandoc version 2 and to "markdown" for pandoc prior to version 2
 MARKDOWN = $(shell if [ `pandoc -v | head -n1 | cut -d" " -f2 | head -c1` = "2" ]; then echo markdown-smart; else echo markdown; fi)
 
 install: yt-dlp yt-dlp.1 completions
-	install -Dm755 yt-dlp $(DESTDIR)$(BINDIR)
-	install -Dm644 yt-dlp.1 $(DESTDIR)$(MANDIR)/man1
-	install -Dm644 completions/bash/yt-dlp $(DESTDIR)$(SHAREDIR)/bash-completion/completions/yt-dlp
-	install -Dm644 completions/zsh/_yt-dlp $(DESTDIR)$(SHAREDIR)/zsh/site-functions/_yt-dlp
-	install -Dm644 completions/fish/yt-dlp.fish $(DESTDIR)$(SHAREDIR)/fish/vendor_completions.d/yt-dlp.fish
+	install -Dm755 yt-dlp $(BINDIR)
+	install -Dm644 yt-dlp.1 $(MANDIR)/man1
+	install -Dm644 completions/bash/yt-dlp $(SHAREDIR)/bash-completion/completions/yt-dlp
+	install -Dm644 completions/zsh/_yt-dlp $(SHAREDIR)/zsh/site-functions/_yt-dlp
+	install -Dm644 completions/fish/yt-dlp.fish $(SHAREDIR)/fish/vendor_completions.d/yt-dlp.fish
 
 codetest:
 	flake8 .
