@@ -93,9 +93,9 @@ The major new features from the latest release of [blackjack4494/yt-dlc](https:/
 
 * **Aria2c with HLS/DASH**: You can use `aria2c` as the external downloader for DASH(mpd) and HLS(m3u8) formats
 
-* **New extractors**: AnimeLab, Philo MSO, Spectrum MSO, SlingTV MSO, Cablevision MSO, RCN MSO, Rcs, Gedi, bitwave.tv, mildom, audius, zee5, mtv.it, wimtv, pluto.tv, niconico users, discoveryplus.in, mediathek, NFHSNetwork, nebula, ukcolumn, whowatch, MxplayerShow, parlview (au), YoutubeWebArchive, fancode, Saitosan, ShemarooMe, telemundo, VootSeries, SonyLIVSeries, HotstarSeries, VidioPremier, VidioLive, RCTIPlus, TBS Live, douyin, pornflip, ParamountPlusSeries, ScienceChannel, Utreon, OpenRec, BandcampMusic, blackboardcollaborate, eroprofile albums, mirrativ, BannedVideo, bilibili categories, Epicon, filmmodu, GabTV, HungamaAlbum, ManotoTV, Niconico search, Patreon User, peloton, ProjectVeritas, radiko, StarTV, tiktok user, Tokentube, voicy, TV2HuSeries, biliintl, 17live, NewgroundsUser, peertube channel/playlist, ZenYandex, CAM4, CGTN, damtomo, gotostage, Koo, Mediaite, Mediaklikk, MuseScore, nzherald, Olympics replay, radlive, SovietsCloset, Streamanity, Theta, Chingari, ciscowebex, Gettr, GoPro, N1, Theta, Veo, Vupload, NovaPlay
+* **New extractors**: AnimeLab, Philo MSO, Spectrum MSO, SlingTV MSO, Cablevision MSO, RCN MSO, Rcs, Gedi, bitwave.tv, mildom, audius, zee5, mtv.it, wimtv, pluto.tv, niconico users, discoveryplus.in, mediathek, NFHSNetwork, nebula, ukcolumn, whowatch, MxplayerShow, parlview (au), YoutubeWebArchive, fancode, Saitosan, ShemarooMe, telemundo, VootSeries, SonyLIVSeries, HotstarSeries, VidioPremier, VidioLive, RCTIPlus, TBS Live, douyin, pornflip, ParamountPlusSeries, ScienceChannel, Utreon, OpenRec, BandcampMusic, blackboardcollaborate, eroprofile albums, mirrativ, BannedVideo, bilibili categories, Epicon, filmmodu, GabTV, HungamaAlbum, ManotoTV, Niconico search, Patreon User, peloton, ProjectVeritas, radiko, StarTV, tiktok user, Tokentube, voicy, TV2HuSeries, biliintl, 17live, NewgroundsUser, peertube channel/playlist, ZenYandex, CAM4, CGTN, damtomo, gotostage, Koo, Mediaite, Mediaklikk, MuseScore, nzherald, Olympics replay, radlive, SovietsCloset, Streamanity, Theta, Chingari, ciscowebex, Gettr, GoPro, N1, Theta, Veo, Vupload, NovaPlay, SkyNewsAU, EUScreen, Gronkh, microsoftstream, on24, trovo channels
 
-* **Fixed/improved extractors**: archive.org, roosterteeth.com, skyit, instagram, itv, SouthparkDe, spreaker, Vlive, akamai, ina, rumble, tennistv, amcnetworks, la7 podcasts, linuxacadamy, nitter, twitcasting, viu, crackle, curiositystream, mediasite, rmcdecouverte, sonyliv, tubi, tenplay, patreon, videa, yahoo, BravoTV, crunchyroll playlist, RTP, viki, Hotstar, vidio, vimeo, mediaset, Mxplayer, nbcolympics, ParamountPlus, Newgrounds, SAML Verizon login, Hungama, afreecatv, aljazeera, ATV, bitchute, camtube, CDA, eroprofile, facebook, HearThisAtIE, iwara, kakao, Motherless, Nova, peertube, pornhub, reddit, tiktok, TV2, TV2Hu, tv5mondeplus, VH1, Viafree, XHamster, 9Now, AnimalPlanet, Arte, CBC, Chingari, comedycentral, DIYNetwork, niconico, dw, funimation, globo, HiDive, NDR, Nuvid, Oreilly, pbs, plutotv, reddit, redtube, soundcloud, SpankBang, VrtNU, bbc, Bilibili, LinkedInLearning, parliamentlive, PolskieRadio, Streamable, vidme, francetv
+* **Fixed/improved extractors**: archive.org, roosterteeth.com, skyit, instagram, itv, SouthparkDe, spreaker, Vlive, akamai, ina, rumble, tennistv, amcnetworks, la7 podcasts, linuxacadamy, nitter, twitcasting, viu, crackle, curiositystream, mediasite, rmcdecouverte, sonyliv, tubi, tenplay, patreon, videa, yahoo, BravoTV, crunchyroll, RTP, viki, Hotstar, vidio, vimeo, mediaset, Mxplayer, nbcolympics, ParamountPlus, Newgrounds, SAML Verizon login, Hungama, afreecatv, aljazeera, ATV, bitchute, camtube, CDA, eroprofile, facebook, HearThisAtIE, iwara, kakao, Motherless, Nova, peertube, pornhub, reddit, tiktok, TV2, TV2Hu, tv5mondeplus, VH1, Viafree, XHamster, 9Now, AnimalPlanet, Arte, CBC, Chingari, comedycentral, DIYNetwork, niconico, dw, funimation, globo, HiDive, NDR, Nuvid, Oreilly, pbs, plutotv, reddit, redtube, soundcloud, SpankBang, VrtNU, bbc, Bilibili, LinkedInLearning, parliamentlive, PolskieRadio, Streamable, vidme, francetv, 7plus, tagesschau
 
 * **Subtitle extraction from manifests**: Subtitles can be extracted from streaming media manifests. See [commit/be6202f](https://github.com/yt-dlp/yt-dlp/commit/be6202f12b97858b9d716e608394b51065d0419f) for details
 
@@ -125,9 +125,9 @@ If you are coming from [youtube-dl](https://github.com/ytdl-org/youtube-dl), the
 
 Some of yt-dlp's default options are different from that of youtube-dl and youtube-dlc.
 
-* The options `--id`, `--auto-number` (`-A`), `--title` (`-t`) and `--literal` (`-l`), no longer work. See [removed options](#Removed) for details
+* The options `--auto-number` (`-A`), `--title` (`-t`) and `--literal` (`-l`), no longer work. See [removed options](#Removed) for details
 * `avconv` is not supported as as an alternative to `ffmpeg`
-* The default [output template](#output-template) is `%(title)s [%(id)s].%(ext)s`. There is no real reason for this change. This was changed before yt-dlp was ever made public and now there are no plans to change it back to `%(title)s.%(id)s.%(ext)s`. Instead, you may use `--compat-options filename`
+* The default [output template](#output-template) is `%(title)s [%(id)s].%(ext)s`. There is no real reason for this change. This was changed before yt-dlp was ever made public and now there are no plans to change it back to `%(title)s-%(id)s.%(ext)s`. Instead, you may use `--compat-options filename`
 * The default [format sorting](#sorting-formats) is different from youtube-dl and prefers higher resolution and better codecs rather than higher bitrates. You can use the `--format-sort` option to change this to any order you prefer, or use `--compat-options format-sort` to use youtube-dl's sorting order
 * The default format selector is `bv*+ba/b`. This means that if a combined video + audio format that is better than the best video-only format is found, the former will be prefered. Use `-f bv+ba/b` or `--compat-options format-spec` to revert this
 * Unlike youtube-dlc, yt-dlp does not allow merging multiple audio/video streams into one file by default (since this conflicts with the use of `-f bv*+ba`). If needed, this feature must be enabled using `--audio-multistreams` and `--video-multistreams`. You can also use `--compat-options multistreams` to enable both
@@ -155,11 +155,10 @@ For ease of use, a few more compat options are available:
 yt-dlp is not platform specific. So it should work on your Unix box, on Windows or on macOS
 
 You can install yt-dlp using one of the following methods:
-* Download the binary from the [latest release](https://github.com/yt-dlp/yt-dlp/releases/latest)
+* Download [the binary](#release-files) from the [latest release](https://github.com/yt-dlp/yt-dlp/releases/latest)
 * With Homebrew, `brew install yt-dlp/taps/yt-dlp`
 * Use [PyPI package](https://pypi.org/project/yt-dlp): `python3 -m pip install --upgrade yt-dlp`
-* Use pip+git: `python3 -m pip install --upgrade git+https://github.com/yt-dlp/yt-dlp.git@release`
-* Install master branch: `python3 -m pip install --upgrade git+https://github.com/yt-dlp/yt-dlp`
+* Install master branch: `python3 -m pip3 install -U https://github.com/yt-dlp/yt-dlp/archive/master.zip`
 
 Note that on some systems, you may need to use `py` or `python` instead of `python3`
 
@@ -193,14 +192,27 @@ If you have installed using Homebrew, run `brew upgrade yt-dlp/taps/yt-dlp`
 
 ### RELEASE FILES
 
+#### Recommended
+
 File|Description
 :---|:---
-[yt-dlp](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp)|Platform independant binary. Needs Python (Recommended for UNIX like OSes)
-[yt-dlp.exe](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe)|Windows standalone x64 binary (Recommended for Windows)
-[yt-dlp_x86.exe](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_x86.exe)|Windows standalone x86 (32bit) binary
-[yt-dlp_win.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_win.zip)|Unpackaged windows executable
-[yt-dlp_macos](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_macos)|MacOS standalone executable
-[yt-dlp_macos.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_macos.zip)|Unpackaged MacOS executable
+[yt-dlp](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp)|Platform independant binary. Needs Python (Recommended for **UNIX-like systems**)
+[yt-dlp.exe](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe)|Windows (Win7 SP1+) standalone x64 binary (Recommended for **Windows**)
+
+#### Alternatives
+
+File|Description
+:---|:---
+[yt-dlp_macos](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_macos)|MacOS (10.15+) standalone executable
+[yt-dlp_x86.exe](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_x86.exe)|Windows (Vista SP2+) standalone x86 (32bit) binary
+[yt-dlp_min.exe](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_min.exe)|Windows (Win7 SP1+) standalone x64 binary built with `py2exe`.<br/> Does not contain `pycryptodomex`, needs VC++14
+[yt-dlp_win.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_win.zip)|Unpackaged windows executable (No auto-update)
+[yt-dlp_macos.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_macos.zip)|Unpackaged MacOS (10.15+) executable (No auto-update)
+
+#### Misc
+
+File|Description
+:---|:---
 [yt-dlp.tar.gz](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.tar.gz)|Source tarball. Also contains manpages, completions, etc
 [SHA2-512SUMS](https://github.com/yt-dlp/yt-dlp/releases/latest/download/SHA2-512SUMS)|GNU-style SHA512 sums
 [SHA2-256SUMS](https://github.com/yt-dlp/yt-dlp/releases/latest/download/SHA2-256SUMS)|GNU-style SHA256 sums
@@ -236,15 +248,11 @@ The windows releases are already built with the python interpreter, mutagen, pyc
 ### COMPILE
 
 **For Windows**:
-To build the Windows executable, you must have pyinstaller (and optionally mutagen, pycryptodomex, websockets)
+To build the Windows executable, you must have pyinstaller (and optionally mutagen, pycryptodomex, websockets). Once you have all the necessary dependencies installed, (optionally) build lazy extractors using `devscripts/make_lazy_extractors.py`, and then just run `pyinst.py`. The executable will be built for the same architecture (32/64 bit) as the python used to build it.
 
-    python3 -m pip install -U -r requirements.txt
-
-Once you have all the necessary dependencies installed, just run `py pyinst.py`. The executable will be built for the same architecture (32/64 bit) as the python used to build it.
-
-You can also build the executable without any version info or metadata by using:
-
-    pyinstaller.exe yt_dlp\__main__.py --onefile --name yt-dlp
+    py -m pip install -U pyinstaller -r requirements.txt
+    py devscripts/make_lazy_extractors.py
+    py pyinst.py
 
 Note that pyinstaller [does not support](https://github.com/pyinstaller/pyinstaller#requirements-and-tested-platforms) Python installed from the Windows store without using a virtual environment
 
@@ -252,7 +260,7 @@ Note that pyinstaller [does not support](https://github.com/pyinstaller/pyinstal
 You will need the required build tools: `python`, `make` (GNU), `pandoc`, `zip`, `pytest`  
 Then simply run `make`. You can also run `make yt-dlp` instead to compile only the binary without updating any of the additional files
 
-**Note**: In either platform, `devscripts\update-version.py` can be used to automatically update the version number
+**Note**: In either platform, `devscripts/update-version.py` can be used to automatically update the version number
 
 # USAGE AND OPTIONS
 
@@ -1026,7 +1034,7 @@ To summarize, the general syntax for a field is:
 %(name[.keys][addition][>strf][,alternate][|default])[flags][width][.precision][length]type
 ```
 
-Additionally, you can set different output templates for the various metadata files separately from the general output template by specifying the type of file followed by the template separated by a colon `:`. The different file types supported are `subtitle`, `thumbnail`, `description`, `annotation` (deprecated), `infojson`, `pl_thumbnail`, `pl_description`, `pl_infojson`, `chapter`. For example, `-o '%(title)s.%(ext)s' -o 'thumbnail:%(title)s\%(title)s.%(ext)s'`  will put the thumbnails in a folder with the same name as the video. If any of the templates (except default) is empty, that type of file will not be written. Eg: `--write-thumbnail -o "thumbnail:"` will write thumbnails only for playlists and not for video.
+Additionally, you can set different output templates for the various metadata files separately from the general output template by specifying the type of file followed by the template separated by a colon `:`. The different file types supported are `subtitle`, `thumbnail`, `description`, `annotation` (deprecated), `infojson`, `link`, `pl_thumbnail`, `pl_description`, `pl_infojson`, `chapter`. For example, `-o '%(title)s.%(ext)s' -o 'thumbnail:%(title)s\%(title)s.%(ext)s'`  will put the thumbnails in a folder with the same name as the video. If any of the templates (except default) is empty, that type of file will not be written. Eg: `--write-thumbnail -o "thumbnail:"` will write thumbnails only for playlists and not for video.
 
 The available fields are:
 
@@ -1147,11 +1155,13 @@ Available only in `--sponsorblock-chapter-title`:
  - `category_names` (list): Friendly names of the categories
  - `name` (string): Friendly name of the smallest category
 
-Each aforementioned sequence when referenced in an output template will be replaced by the actual value corresponding to the sequence name. Note that some of the sequences are not guaranteed to be present since they depend on the metadata obtained by a particular extractor. Such sequences will be replaced with placeholder value provided with `--output-na-placeholder` (`NA` by default).
+Each aforementioned sequence when referenced in an output template will be replaced by the actual value corresponding to the sequence name. For example for `-o %(title)s-%(id)s.%(ext)s` and an mp4 video with title `yt-dlp test video` and id `BaW_jenozKc`, this will result in a `yt-dlp test video-BaW_jenozKc.mp4` file created in the current directory.
 
-For example for `-o %(title)s-%(id)s.%(ext)s` and an mp4 video with title `yt-dlp test video` and id `BaW_jenozKc`, this will result in a `yt-dlp test video-BaW_jenozKc.mp4` file created in the current directory.
+Note that some of the sequences are not guaranteed to be present since they depend on the metadata obtained by a particular extractor. Such sequences will be replaced with placeholder value provided with `--output-na-placeholder` (`NA` by default).
 
-For numeric sequences you can use numeric related formatting, for example, `%(view_count)05d` will result in a string with view count padded with zeros up to 5 characters, like in `00042`.
+**Tip**: Look at the `-j` output to identify which fields are available for the purticular URL
+
+For numeric sequences you can use [numeric related formatting](https://docs.python.org/3/library/stdtypes.html#printf-style-string-formatting), for example, `%(view_count)05d` will result in a string with view count padded with zeros up to 5 characters, like in `00042`.
 
 Output templates can also contain arbitrary hierarchical path, e.g. `-o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'` which will result in downloading each video in a directory corresponding to this path template. Any missing directory will be automatically created for you.
 
@@ -1300,7 +1310,7 @@ The available fields are:
  - `width`: Width of video
  - `res`: Video resolution, calculated as the smallest dimension.
  - `fps`: Framerate of video
- - `hdr`: The dynamic range of the video (`DV` > `HDR12` > `HDR10+` > `HDR10` > `SDR`)
+ - `hdr`: The dynamic range of the video (`DV` > `HDR12` > `HDR10+` > `HDR10` > `HLG` > `SDR`)
  - `tbr`: Total average bitrate in KBit/s
  - `vbr`: Average video bitrate in KBit/s
  - `abr`: Average audio bitrate in KBit/s
@@ -1506,24 +1516,25 @@ $ yt-dlp --replace-in-metadata 'title,uploader' '[ _]' '-'
 Some extractors accept additional arguments which can be passed using `--extractor-args KEY:ARGS`. `ARGS` is a `;` (semicolon) seperated string of `ARG=VAL1,VAL2`. Eg: `--extractor-args "youtube:player_client=android_agegate,web;include_live_dash" --extractor-args "funimation:version=uncut"`
 
 The following extractors use this feature:
-* **youtube**
-    * `skip`: `hls` or `dash` (or both) to skip download of the respective manifests
-    * `player_client`: Clients to extract video data from. The main clients are `web`, `android`, `ios`, `mweb`. These also have `_music`, `_embedded`, `_agegate`, and `_creator` variants (Eg: `web_embedded`) (`mweb` has only `_agegate`). By default, `android,web` is used, but the agegate and creator variants are added as required for age-gated videos. Similarly the music variants are added for `music.youtube.com` urls. You can also use `all` to use all the clients
-    * `player_skip`: Skip some network requests that are generally needed for robust extraction. One or more of `configs` (skip client configs), `webpage` (skip initial webpage), `js` (skip js player). While these options can help reduce the number of requests needed or avoid some rate-limiting, they could cause some issues. See [#860](https://github.com/yt-dlp/yt-dlp/pull/860) for more details
-    * `include_live_dash`: Include live dash formats (These formats don't download properly)
-    * `comment_sort`: `top` or `new` (default) - choose comment sorting mode (on YouTube's side).
-    * `max_comments`: Maximum amount of comments to download (default all).
-    * `max_comment_depth`: Maximum depth for nested comments. YouTube supports depths 1 or 2 (default).
-* **youtubetab**
-  (YouTube playlists, channels, feeds, etc.)
-   * `skip`: One or more of `webpage` (skip initial webpage download), `authcheck` (allow the download of playlists requiring authentication when no initial webpage is downloaded. This may cause unwanted behavior, see [#1122](https://github.com/yt-dlp/yt-dlp/pull/1122) for more details)
 
-* **funimation**
-    * `language`: Languages to extract. Eg: `funimation:language=english,japanese`
-    * `version`: The video version to extract - `uncut` or `simulcast`
+#### youtube
+* `skip`: `hls` or `dash` (or both) to skip download of the respective manifests
+* `player_client`: Clients to extract video data from. The main clients are `web`, `android`, `ios`, `mweb`. These also have `_music`, `_embedded`, `_agegate`, and `_creator` variants (Eg: `web_embedded`) (`mweb` has only `_agegate`). By default, `android,web` is used, but the agegate and creator variants are added as required for age-gated videos. Similarly the music variants are added for `music.youtube.com` urls. You can also use `all` to use all the clients
+* `player_skip`: Skip some network requests that are generally needed for robust extraction. One or more of `configs` (skip client configs), `webpage` (skip initial webpage), `js` (skip js player). While these options can help reduce the number of requests needed or avoid some rate-limiting, they could cause some issues. See [#860](https://github.com/yt-dlp/yt-dlp/pull/860) for more details
+* `include_live_dash`: Include live dash formats (These formats don't download properly)
+* `comment_sort`: `top` or `new` (default) - choose comment sorting mode (on YouTube's side)
+* `max_comments`: Maximum amount of comments to download (default all)
+* `max_comment_depth`: Maximum depth for nested comments. YouTube supports depths 1 or 2 (default)
 
-* **vikiChannel**
-    * `video_types`: Types of videos to download - one or more of `episodes`, `movies`, `clips`, `trailers`
+#### youtubetab (YouTube playlists, channels, feeds, etc.)
+* `skip`: One or more of `webpage` (skip initial webpage download), `authcheck` (allow the download of playlists requiring authentication when no initial webpage is downloaded. This may cause unwanted behavior, see [#1122](https://github.com/yt-dlp/yt-dlp/pull/1122) for more details)
+
+#### funimation
+* `language`: Languages to extract. Eg: `funimation:language=english,japanese`
+* `version`: The video version to extract - `uncut` or `simulcast`
+
+#### vikichannel
+* `video_types`: Types of videos to download - one or more of `episodes`, `movies`, `clips`, `trailers`
 
 NOTE: These options may be changed/removed in the future without concern for backward compatibility
 
@@ -1618,6 +1629,8 @@ with yt_dlp.YoutubeDL(ydl_opts) as ydl:
 
 See the public functions in [`yt_dlp/YoutubeDL.py`](yt_dlp/YoutubeDL.py) for other available functions. Eg: `ydl.download`, `ydl.download_with_info_file`
 
+**Tip**: If you are porting your code from youtube-dl to yt-dlp, one important point to look out for is that we do not guarantee the return value of `YoutubeDL.extract_info` to be json serializable, or even be a dictionary. It will be dictionary-like, but if you want to ensure it is a serializable dictionary, pass it through `YoutubeDL.sanitize_info` as shown in the example above
+
 
 # DEPRECATED OPTIONS
 
@@ -1649,6 +1662,7 @@ While these options still work, their use is not recommended since there are oth
     --print-json                     -j --no-simulate
     --autonumber-size NUMBER         Use string formatting. Eg: %(autonumber)03d
     --autonumber-start NUMBER        Use internal field formatting like %(autonumber+NUMBER)s
+    --id                             -o "%(id)s.%(ext)s"
     --metadata-from-title FORMAT     --parse-metadata "%(title)s:FORMAT"
     --hls-prefer-native              --downloader "m3u8:native"
     --hls-prefer-ffmpeg              --downloader "m3u8:ffmpeg"
@@ -1715,7 +1729,6 @@ These options may no longer work as intended
 #### Removed
 These options were deprecated since 2014 and have now been entirely removed
 
-    --id                             -o "%(id)s.%(ext)s"
     -A, --auto-number                -o "%(autonumber)s-%(id)s.%(ext)s"
     -t, --title                      -o "%(title)s-%(id)s.%(ext)s"
     -l, --literal                    -o accepts literal names

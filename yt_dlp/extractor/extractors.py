@@ -760,6 +760,7 @@ from .metacritic import MetacriticIE
 from .mgoon import MgoonIE
 from .mgtv import MGTVIE
 from .miaopai import MiaoPaiIE
+from .microsoftstream import MicrosoftStreamIE
 from .microsoftvirtualacademy import (
     MicrosoftVirtualAcademyIE,
     MicrosoftVirtualAcademyCourseIE,
@@ -792,6 +793,7 @@ from .mlb import (
     MLBIE,
     MLBVideoIE,
 )
+from .mlssoccer import MLSSoccerIE
 from .mnet import MnetIE
 from .moevideo import MoeVideoIE
 from .mofosex import (
@@ -1288,6 +1290,7 @@ from .skynewsarabia import (
 from .skynewsau import SkyNewsAUIE
 from .sky import (
     SkyNewsIE,
+    SkyNewsStoryIE,
     SkySportsIE,
     SkySportsNewsIE,
 )
@@ -1387,10 +1390,7 @@ from .svt import (
 from .swrmediathek import SWRMediathekIE
 from .syfy import SyfyIE
 from .sztvhu import SztvHuIE
-from .tagesschau import (
-    TagesschauPlayerIE,
-    TagesschauIE,
-)
+from .tagesschau import TagesschauIE
 from .tass import TassIE
 from .tbs import TBSIE
 from .tdslifeway import TDSLifewayIE
@@ -1444,6 +1444,10 @@ from .theweatherchannel import TheWeatherChannelIE
 from .thisamericanlife import ThisAmericanLifeIE
 from .thisav import ThisAVIE
 from .thisoldhouse import ThisOldHouseIE
+from .threespeak import (
+    ThreeSpeakIE,
+    ThreeSpeakUserIE,
+)
 from .threeqsdn import ThreeQSDNIE
 from .tiktok import (
     TikTokIE,

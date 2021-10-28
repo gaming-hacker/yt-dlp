@@ -74,6 +74,7 @@ from ..utils import (
     strip_or_none,
     traverse_obj,
     unescapeHTML,
+    UnsupportedError,
     unified_strdate,
     unified_timestamp,
     update_Request,
@@ -448,7 +449,9 @@ class InfoExtractor(object):
     }
 
     def __init__(self, downloader=None):
-        """Constructor. Receives an optional downloader."""
+        """Constructor. Receives an optional downloader (a YoutubeDL instance).
+        If a downloader is not passed during initialization,
+        it must be set using "set_downloader()" before "extract()" is called"""
         self._ready = False
         self._x_forwarded_for_ip = None
         self._printed_messages = set()
@@ -602,10 +605,19 @@ class InfoExtractor(object):
                     if self.__maybe_fake_ip_and_retry(e.countries):
                         continue
                     raise
+        except UnsupportedError:
+            raise
         except ExtractorError as e:
-            video_id = e.video_id or self.get_temp_id(url)
-            raise ExtractorError(
-                e.msg, video_id=video_id, ie=self.IE_NAME, tb=e.traceback, expected=e.expected, cause=e.cause)
+            kwargs = {
+                'video_id': e.video_id or self.get_temp_id(url),
+                'ie': self.IE_NAME,
+                'tb': e.traceback,
+                'expected': e.expected,
+                'cause': e.cause
+            }
+            if hasattr(e, 'countries'):
+                kwargs['countries'] = e.countries
+            raise type(e)(e.msg, **kwargs)
         except compat_http_client.IncompleteRead as e:
             raise ExtractorError('A network error has occurred.', cause=e, expected=True, video_id=self.get_temp_id(url))
         except (KeyError, StopIteration) as e:
@@ -664,7 +676,7 @@ class InfoExtractor(object):
         See _download_webpage docstring for arguments specification.
         """
         if not self._downloader._first_webpage_request:
-            sleep_interval = float_or_none(self.get_param('sleep_interval_requests')) or 0
+            sleep_interval = self.get_param('sleep_interval_requests') or 0
             if sleep_interval > 0:
                 self.to_screen('Sleeping %s seconds ...' % sleep_interval)
                 time.sleep(sleep_interval)
@@ -1137,7 +1149,7 @@ class InfoExtractor(object):
                 if mobj:
                     break
 
-        _name = self._downloader._color_text(name, 'blue')
+        _name = self._downloader._format_err(name, self._downloader.Styles.EMPHASIS)
 
         if mobj:
             if group is None:
@@ -3618,8 +3630,10 @@ class SearchInfoExtractor(InfoExtractor):
     """
     Base class for paged search queries extractors.
     They accept URLs in the format _SEARCH_KEY(|all|[0-9]):{query}
-    Instances should define _SEARCH_KEY and _MAX_RESULTS.
+    Instances should define _SEARCH_KEY and optionally _MAX_RESULTS
     """
+
+    _MAX_RESULTS = float('inf')
 
     @classmethod
     def _make_valid_url(cls):
