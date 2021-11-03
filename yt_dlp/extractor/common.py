@@ -441,11 +441,11 @@ class InfoExtractor(object):
     _WORKING = True
 
     _LOGIN_HINTS = {
-        'any': 'Use --cookies, --username and --password or --netrc to provide account credentials',
+        'any': 'Use --cookies, --username and --password, or --netrc to provide account credentials',
         'cookies': (
             'Use --cookies-from-browser or --cookies for the authentication. '
             'See  https://github.com/ytdl-org/youtube-dl#how-do-i-pass-cookies-to-youtube-dl  for how to manually pass cookies'),
-        'password': 'Use --username and --password or --netrc to provide account credentials',
+        'password': 'Use --username and --password, or --netrc to provide account credentials',
     }
 
     def __init__(self, downloader=None):
@@ -1549,8 +1549,8 @@ class InfoExtractor(object):
             'ie_pref': {'priority': True, 'type': 'extractor'},
             'hasvid': {'priority': True, 'field': 'vcodec', 'type': 'boolean', 'not_in_list': ('none',)},
             'hasaud': {'field': 'acodec', 'type': 'boolean', 'not_in_list': ('none',)},
-            'lang': {'convert': 'ignore', 'field': 'language_preference'},
-            'quality': {'convert': 'float_none', 'default': -1},
+            'lang': {'convert': 'float', 'field': 'language_preference', 'default': -1},
+            'quality': {'convert': 'float', 'default': -1},
             'filesize': {'convert': 'bytes'},
             'fs_approx': {'convert': 'bytes', 'field': 'filesize_approx'},
             'id': {'convert': 'string', 'field': 'format_id'},
@@ -1561,7 +1561,7 @@ class InfoExtractor(object):
             'vbr': {'convert': 'float_none'},
             'abr': {'convert': 'float_none'},
             'asr': {'convert': 'float_none'},
-            'source': {'convert': 'ignore', 'field': 'source_preference'},
+            'source': {'convert': 'float', 'field': 'source_preference', 'default': -1},
 
             'codec': {'type': 'combined', 'field': ('vcodec', 'acodec')},
             'br': {'type': 'combined', 'field': ('tbr', 'vbr', 'abr'), 'same_limit': True},
