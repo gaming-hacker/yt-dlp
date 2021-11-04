@@ -2512,8 +2512,8 @@ class YoutubeIE(YoutubeBaseInfoExtractor):
                               ' (default)' if audio_track.get('audioIsDefault') else ''),
                     fmt.get('qualityLabel') or quality.replace('audio_quality_', ''),
                     throttled and 'THROTTLED'))),
-                'source_preference': -10 if not throttled else -1,
-                'fps': int_or_none(fmt.get('fps')),
+                'source_preference': -10 if throttled else -1,
+                'fps': int_or_none(fmt.get('fps')) or None,
                 'height': height,
                 'quality': q(quality),
                 'tbr': tbr,
@@ -2695,7 +2695,7 @@ class YoutubeIE(YoutubeBaseInfoExtractor):
 
         # Source is given priority since formats that throttle are given lower source_preference
         # When throttling issue is fully fixed, remove this
-        self._sort_formats(formats, ('quality', 'res', 'fps', 'hdr:12', 'source', 'codec:vp9.2', 'lang'))
+        self._sort_formats(formats, ('quality', 'res', 'fps', 'hdr:12', 'source', 'codec:vp9.2', 'lang', 'proto'))
 
         keywords = get_first(video_details, 'keywords', expected_type=list) or []
         if not keywords and webpage:
