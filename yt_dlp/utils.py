@@ -2006,6 +2006,23 @@ class HTMLAttributeParser(compat_HTMLParser):
         self.attrs = dict(attrs)
 
 
+class HTMLListAttrsParser(compat_HTMLParser):
+    """HTML parser to gather the attributes for the elements of a list"""
+
+    def __init__(self):
+        compat_HTMLParser.__init__(self)
+        self.items = []
+        self._level = 0
+
+    def handle_starttag(self, tag, attrs):
+        if tag == 'li' and self._level == 0:
+            self.items.append(dict(attrs))
+        self._level += 1
+
+    def handle_endtag(self, tag):
+        self._level -= 1
+
+
 def extract_attributes(html_element):
     """Given a string for an HTML element such as
     <el
@@ -2030,6 +2047,15 @@ def extract_attributes(html_element):
     except compat_HTMLParseError:
         pass
     return parser.attrs
+
+
+def parse_list(webpage):
+    """Given a string for an series of HTML <li> elements,
+    return a dictionary of their attributes"""
+    parser = HTMLListAttrsParser()
+    parser.feed(webpage)
+    parser.close()
+    return parser.items
 
 
 def clean_html(html):
@@ -6544,3 +6570,9 @@ def remove_terminal_sequences(string):
 
 def number_of_digits(number):
     return len('%d' % number)
+
+
+def join_nonempty(*values, delim='-', from_dict=None):
+    if from_dict is not None:
+        values = operator.itemgetter(values)(from_dict)
+    return delim.join(map(str, filter(None, values)))
